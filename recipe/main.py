@@ -7,6 +7,7 @@ def create_recipe(name, chocolate = 0, coffee=0, milk = 0, sugar = 0, price = 0.
     recipe.milk = milk
     recipe.sugar = sugar
     recipe.price = price
+    return recipe
 
 
 if __name__ == '__main__':
