@@ -28,6 +28,7 @@ Refactoring
 1. Refactor the create_canvas function to return the canvas because the old version doesn't init the self.canvas.
 2. Refactor the string literal with constant because It can change to be constant.
 3. Passing the argument width and high to create_canvas because It will be easier to understand.
+4. Refactor the constant of canvas width height and delay because It has to be a constant for init the canvas.
 
 ## `recipe/recipe.py` and `recipe/main.py`
 
