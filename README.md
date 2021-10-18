@@ -22,7 +22,12 @@ Look for refactorings in the class `GameApp`.
 * Avoid side-effects: replace side effect with return value (the caller must use the return value)
 
 * Encapsulate a collection - provide behavior that subclasses of GameApp need instead of requiring them to manipulate a collection that belongs to the GameApp class.
-  - Hint: `elements`
+  - Hint: `elements`  
+
+Refactoring 
+1. Refactor the create_canvas function to return the canvas because the old version doesn't init the self.canvas.
+2. Refactor the string literal with constant because It can change to be constant.
+3. Passing the argument width and high to create_canvas because It will be easier to understand.
 
 ## `recipe/recipe.py` and `recipe/main.py`
 
