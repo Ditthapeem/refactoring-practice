@@ -12,7 +12,7 @@ Each subdirectory contains some code that needs refactoring.
 
 1. Refactor name of create_time_from_times_tamp function because the function name should be lowercase and separate by underscore.
 2. Refactor name of Args because the variable should have meaning.
-
+3. Delete unnecessary else because we already check the len of timestamp.
 
 ## `game_framework/gamelib.py`
 
