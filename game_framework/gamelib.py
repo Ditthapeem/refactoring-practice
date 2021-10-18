@@ -75,7 +75,8 @@ class Sprite(GameCanvasElement):
             image=self.photo_image)
 
 
-class GameApp(ttk.Frame): 
+class GameApp(ttk.Frame):
+    NEWS = "news"
     """Base class for a game.  This class creates a canvas, manages 
     a collection of game elements, and controls animation.  
 
@@ -92,8 +93,8 @@ class GameApp(ttk.Frame):
         
         self.update_delay = update_delay
 
-        self.grid(sticky="news")
-        self.create_canvas()
+        self.grid(self.NEWS)
+        self.canvas = self.create_canvas(canvas_width, canvas_height)
 
         self.elements = []
         self.init_game()
@@ -102,11 +103,11 @@ class GameApp(ttk.Frame):
         self.parent.bind('<KeyRelease>', self.on_key_released)
         
     #TODO refactor this - don't depend on side effects
-    def create_canvas(self):
-        self.canvas = tk.Canvas(self, borderwidth=0,
-            width=self.canvas_width, height=self.canvas_height, 
-            highlightthickness=0)
-        self.canvas.grid(sticky="news")
+    def create_canvas(self, width, height):
+        canvas = tk.Canvas(self, borderwidth=0, width=width, height=height,
+                            highlightthickness=0)
+        canvas.grid(sticky=self.NEWS)
+        return canvas
 
     def animate(self):
         self.pre_update()
