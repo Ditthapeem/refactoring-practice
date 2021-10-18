@@ -10,7 +10,8 @@ Each subdirectory contains some code that needs refactoring.
 
 ## `time/timestamp.py`
 
-Refactor timestamp.py.  2 or 3 refactorings are possible.
+1. Refactor name of create_time_from_times_tamp function because the function name should be lowercase and separate by underscore.
+2. Refactor name of Args because the variable should have meaning.
 
 
 ## `game_framework/gamelib.py`
